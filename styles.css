@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-bottom: 4px solid black;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.navbar_left, .navbar_middle, .navbar_right {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar_middle{
+    font-size: 1.25rem;
+    font-weight: 550;
+}
+
+.navbar_left li, .navbar_right span {
+    margin-right: 1rem;
+}
+
+.navbar_left a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_middle img {
+    height: 36px;
+    transform: translateY(-10%);
+}
+
+.search-form {
+    position: relative;
+}
+
+.search-form input {
+    padding: 0.5rem;
+    border: 1px solid #0c0b0b;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-form img {
+    height: 20px;
+}
