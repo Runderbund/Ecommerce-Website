@@ -1,3 +1,10 @@
+/* Changes to make*/
+/* Cut top black bar, add padding to sides*/
+/* Center CARA CARA on page, not in middle section*/
+/* Larger space between left flower picture and text blocks*/
+/* Figure out fade to black on sides*/
+
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -64,4 +71,81 @@ header {
 
 .search-form img {
     height: 20px;
+}
+
+.full-width-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 600px; /* Set the desired height */
+    background-color: black;
+}
+
+.full-width-image:before,
+.full-width-image:after {
+    content: "";
+    position: absolute;
+    width: 15%; /* Adjust the percentage to control the fade width */
+    height: 100%;
+    pointer-events: none;
+}
+
+.full-width-image:before {
+    left: 0;
+    background: linear-gradient(to right, black 100%, transparent 100%);
+}
+
+.full-width-image:after {
+    right: 0;
+    background: linear-gradient(to left, black 100%, transparent 100%);
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-us {
+    max-width: calc(100% - 4rem);
+    margin: 2rem auto;
+}
+
+.about-us h2 {
+    border-bottom: 2px solid black; /* Adjusting this not showing up */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+.about-us-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+    flex-basis: 48%; /* Adjust the percentage to control the width of the columns */
+    padding: 1rem;
+}
+
+.text-block {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.left-image-and-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-image-and-text img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.text-blocks {
+    width: 100%;
 }
