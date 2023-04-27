@@ -1,49 +1,69 @@
 /* Changes to make*/
-/* Cut top black bar, add padding to sides*/
-/* Center CARA CARA on page, not in middle section*/
-/* Larger space between left flower picture and text blocks*/
-/* Figure out fade to black on sides*/
+    /* Cut top black bar*/
+    /* Larger space between left flower picture and text blocks*/
+    /* Figure out fade to black on sides*/
+    /* Trim product pictures. Different for each?*/
+    /* Resize pictures in ABOUT US section*/
+    /* Increase font size*/
+    /* Decrease footer icon size*/
+    /* Separate footer text to right/left*/
+    /* Consolidate h2 rules?*/
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
 body {
     font-family: Arial, sans-serif;
 }
 
-header {
+nav {
+    background-color: white;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
     padding-left: 2rem;
     padding-right: 2rem;
     border-bottom: 4px solid black;
+    margin: 0 auto;
 }
 
 .nav-list {
     list-style-type: none;
 }
 
-.navbar_left, .navbar_middle, .navbar_right {
+.navbar-left, .navbar-middle, .navbar-right {
     display: flex;
     align-items: center;
     list-style-type: none;
 }
 
-.navbar_middle{
+.navbar-middle{
     font-size: 1.25rem;
     font-weight: 550;
 }
 
-.navbar_left li, .navbar_right span {
+.navbar-left li, .navbar-right span {
     margin-right: 1rem;
 }
 
-.navbar_left a {
+.navbar-left a {
     text-decoration: none;
     color: black;
 }
 
-.navbar_middle img {
+.navbar-middle img {
     height: 36px;
     transform: translateY(-10%);
 }
@@ -76,7 +96,7 @@ header {
 .full-width-image-wrapper {
     position: relative;
     overflow: hidden;
-    height: 600px; /* Set the desired height */
+    height: 600px;
     background-color: black;
 }
 
@@ -84,7 +104,7 @@ header {
 .full-width-image:after {
     content: "";
     position: absolute;
-    width: 15%; /* Adjust the percentage to control the fade width */
+    width: 15%;
     height: 100%;
     pointer-events: none;
 }
@@ -108,14 +128,16 @@ header {
 .about-us {
     max-width: calc(100% - 4rem);
     margin: 2rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .about-us h2 {
-    border-bottom: 2px solid black; /* Adjusting this not showing up */
+    border-bottom: 4px solid black;
     display: inline-block;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
-    width: 50%;
+    width: 60%;
 }
 
 .about-us-content {
@@ -125,7 +147,7 @@ header {
 }
 
 .left-column, .right-column {
-    flex-basis: 48%; /* Adjust the percentage to control the width of the columns */
+    flex-basis: 48%;
     padding: 1rem;
 }
 
@@ -148,4 +170,182 @@ header {
 
 .text-blocks {
     width: 100%;
+}
+
+.our-products{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.our-products h2 {
+    border-bottom: 4px solid black;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    width: 60%;
+}
+
+.our-products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1rem;
+}
+  
+.product-grid-item {
+    flex-basis: calc(33.33% - 1rem);
+    max-width: calc(33.33% - 1rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px black;
+}
+  
+.grid-item-info {
+    display: flex;
+    flex-direction: column;
+}
+  
+.grid-item-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+  
+.grid-item-line {
+    width: 70%;
+    height: 1px;
+    background-color: black;
+    margin: 0.5rem 0;
+}
+  
+.grid-item-text {
+    margin-bottom: 0.5rem;
+}
+  
+.grid-item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.learn-more {
+    text-decoration: underline;
+    color: rgb(209, 118, 13);
+    cursor: pointer;
+}
+  
+.add-to-cart {
+    background-color: rgb(209, 118, 13);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-us {
+    max-width: calc(100% - 4rem);
+    margin: 2rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.contact-us h2 {
+    border-bottom: 4px solid black;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    width: 60%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #0c0b0b;
+    border-radius: 4px;
+}
+
+.send-button {
+    align-self: flex-end;
+    background-color: rgb(209, 118, 13);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(209, 118, 13);
+    padding: 1rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 65%;;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left img,
+.footer-right img {
+    margin-right: 1rem;
+}
+
+.footer-middle span {
+    color: black;
+    font-weight: 550;
+    margin: 0 1rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 65%;
+    margin: 0.5rem auto 0;
+    font-size: 0.8rem;
+}
+
+.left-text,
+.right-text {
+    color: black;
+}
+
+.copyright {
+    margin-left: auto;
+    color: black;
 }
