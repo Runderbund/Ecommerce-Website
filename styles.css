@@ -17,7 +17,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 85%;
 }
 
 body {
@@ -112,6 +112,7 @@ h2 {
     margin-left: -5rem;
     margin-right: -5rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .full-width-image {
@@ -166,59 +167,89 @@ h2 {
     flex-wrap: wrap;
 }
 
-.about-us-left, .about-us-right {
+.about-us-left {
+    flex-basis: 55%;
+}
+
+.about-us-right {
     flex-basis: 35%;
 }
-/* .about-us-top-text {
 
-} */
-.text-block {
-    margin-bottom: 1rem;
+.about-us-top-text {
     text-align: justify;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
 }
 
 .left-image-and-text {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .left-image-and-text img {
-    width: 70%;
+    width: 45%;
     height: auto;
+}
+
+.text-block {
+    width: 50%;
+    text-align: justify;
+}
+
+/* Psuedo-class to select the first paragraph */
+.text-block p:first-child {
+    margin-bottom: 2rem;
+}
+
+.text-block p {
     margin-bottom: 1rem;
 }
 
 .about-us-right img {
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    object-fit: cover;
     transform: scaleX(-1);
 }
 
+
 /* OUR PRODUCTS section */
+/* I missed a detail. I don't want the entire image to shrink. I want the  */
 .our-products-grid {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    gap: 1rem;
+    gap: 3rem;
 }
   
 .product-grid-item {
-    flex-basis: calc(33.33% - 1rem);
-    max-width: calc(33.33% - 1rem);
+    flex-basis: calc(33.33% - 2rem);
+    max-width: calc(33.33% - 2rem);
     padding: 1rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-.grid-item img {
+.product-grid-item img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
-    border: 2px solid black;
+    border: 1px solid black;
 }
+
+.grid-title {
+    display: inline-block;
+}
+
+.title-text {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: black;
+}
+
   
 .grid-item-info {
     display: flex;
@@ -226,6 +257,7 @@ h2 {
 }
   
 .grid-item-title-price {
+    
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -233,7 +265,7 @@ h2 {
   
 .grid-item-line {
     width: 70%;
-    height: 1px;
+    height: 2px;
     background-color: black;
     margin: 0.5rem 0;
 }
@@ -302,29 +334,35 @@ h2 {
 footer {
     background-color: rgb(209, 118, 13);
     padding: 1rem 0;
+    margin-top: 3rem;
+    margin-left: -5rem;
+    margin-right: -5rem;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 65%;;
+    max-width: 65%;
     margin: 0 auto;
 }
 
-.footer-left, .footer-middle, .footer-right {
+.footer-left,
+.footer-middle,
+.footer-right {
     display: flex;
     align-items: center;
-}
+    }
 
-.footer-left img, .footer-right img {
+.footer-left img,
+.footer-right img {
     margin-right: 1rem;
-    height: 50px
+    height: 50px;
 }
 
 .footer-middle img {
     margin-right: 1rem;
-    height: 70px
+    height: 70px;
 }
 
 .footer-middle span {
@@ -337,19 +375,16 @@ footer {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 65%;
     margin: 0.5rem auto 0;
-    font-size: 0.8rem;
-}
-
-.left-text, .right-text {
-    color: black;
-    font-size: 1rem;
-}
-
-.copyright {
     margin-left: auto;
-    color: black;
+}
+
+.right-text {
+    margin-left: auto;
+}
+.copyright {
+    text-align: right;
+    margin-right: 1rem;
 }
