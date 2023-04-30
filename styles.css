@@ -1,5 +1,4 @@
 /* Changes to make*/
-    /* Cut top black bar*/
     /* Larger space between left flower picture and text blocks*/
     /* Figure out fade to black on sides*/
     /* Trim product pictures. Different for each?*/
@@ -7,7 +6,6 @@
     /* Increase font size*/
     /* Decrease footer icon size*/
     /* Separate footer text to right/left*/
-    /* Consolidate h2 rules?*/
 
 *,
 *::before,
@@ -21,22 +19,29 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
+
 body {
     font-family: Arial, sans-serif;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
-nav {
-    background-color: white;
+h2 {
+    border-bottom: 4px solid black;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    width: 60%;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
     border-bottom: 4px solid black;
     margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .nav-list {
@@ -50,22 +55,22 @@ nav {
 }
 
 .navbar-middle{
-    font-size: 1.25rem;
-    font-weight: 550;
+    font-size: 1.75rem;
+    font-weight: 525;
 }
 
 .navbar-left li, .navbar-right span {
-    margin-right: 1rem;
+    margin-right: 2rem;
+    font-size: 1.25rem;
 }
 
 .navbar-left a {
-    text-decoration: none;
+    text-decoration: none; /* removes underline */
     color: black;
 }
 
 .navbar-middle img {
-    height: 36px;
-    transform: translateY(-10%);
+    height: 28px;
 }
 
 .search-form {
@@ -73,19 +78,19 @@ nav {
 }
 
 .search-form input {
-    padding: 0.5rem;
+    padding: 0.25rem;
     border: 1px solid #0c0b0b;
     border-radius: 4px;
-    margin-right: 0.5rem;
+    margin-right: 3rem;
 }
 
 .search-form button {
     background: none;
     border: none;
     position: absolute;
-    right: 0.5rem;
+    right: 3rem;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     cursor: pointer;
 }
 
@@ -93,52 +98,26 @@ nav {
     height: 20px;
 }
 
+
+
 .full-width-image-wrapper {
     position: relative;
-    overflow: hidden;
-    height: 600px;
+    height: calc(100vh / 6); /* previously 400px */
     background-color: black;
+    margin-left: -5rem; /* Overwrites/undoes the body margins */
+    margin-right: -5rem;
 }
 
-.full-width-image:before,
-.full-width-image:after {
-    content: "";
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.full-width-image:before {
-    left: 0;
-    background: linear-gradient(to right, black 100%, transparent 100%);
-}
-
-.full-width-image:after {
-    right: 0;
-    background: linear-gradient(to left, black 100%, transparent 100%);
-}
-
-.full-width-image img {
+.full-width-image {
+    background-image: linear-gradient(to right, black 10%, transparent 10%, transparent 90%, black 90%), url('assets/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
 }
 
-.about-us {
-    max-width: calc(100% - 4rem);
-    margin: 2rem auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
 
-.about-us h2 {
-    border-bottom: 4px solid black;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    width: 60%;
-}
 
 .about-us-content {
     display: flex;
@@ -146,9 +125,8 @@ nav {
     flex-wrap: wrap;
 }
 
-.left-column, .right-column {
-    flex-basis: 48%;
-    padding: 1rem;
+.about-us-left, .about-us-right {
+    flex-basis: 30%;
 }
 
 .text-block {
@@ -172,18 +150,7 @@ nav {
     width: 100%;
 }
 
-.our-products{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
 
-.our-products h2 {
-    border-bottom: 4px solid black;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    width: 60%;
-}
 
 .our-products-grid {
     display: flex;
@@ -250,20 +217,7 @@ nav {
     cursor: pointer;
 }
 
-.contact-us {
-    max-width: calc(100% - 4rem);
-    margin: 2rem auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
 
-.contact-us h2 {
-    border-bottom: 4px solid black;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    width: 60%;
-}
 
 .contact-form {
     display: flex;
@@ -300,6 +254,8 @@ nav {
     cursor: pointer;
 }
 
+
+
 footer {
     background-color: rgb(209, 118, 13);
     padding: 1rem 0;
@@ -313,22 +269,27 @@ footer {
     margin: 0 auto;
 }
 
-.footer-left,
-.footer-middle,
-.footer-right {
+.footer-left, .footer-middle, .footer-right {
     display: flex;
     align-items: center;
 }
 
-.footer-left img,
-.footer-right img {
+.footer-left img, .footer-right img {
     margin-right: 1rem;
+    height: 50px
+}
+
+.footer-middle img {
+    margin-right: 1rem;
+    height: 70px
 }
 
 .footer-middle span {
     color: black;
     font-weight: 550;
     margin: 0 1rem;
+    font-size: 2rem;
+    font-weight: 525;
 }
 
 .footer-bottom {
@@ -340,9 +301,9 @@ footer {
     font-size: 0.8rem;
 }
 
-.left-text,
-.right-text {
+.left-text, .right-text {
     color: black;
+    font-size: 1rem;
 }
 
 .copyright {
