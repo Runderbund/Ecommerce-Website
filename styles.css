@@ -1,5 +1,4 @@
-/* Add media queries */
-/* Add product pages*/
+/* Bonus: Add media queries, Add product pages*/
 *,
 *::before,
 *::after {
@@ -36,13 +35,8 @@ h2 {
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid black;
-    margin: 0 auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-.nav-list {
-    list-style-type: none;
 }
 
 .navbar-left, .navbar-middle, .navbar-right {
@@ -62,7 +56,7 @@ h2 {
 }
 
 .navbar-left a {
-    text-decoration: none; /* removes underline */
+    text-decoration: none; /* Removes link underline */
     color: black;
 }
 
@@ -87,7 +81,7 @@ h2 {
     position: absolute;
     right: 3rem;
     top: 50%;
-    transform: translateY(-45%);
+    transform: translateY(-45%); /* Moves magnifying glass icon upward */
     cursor: pointer;
 }
 
@@ -99,10 +93,10 @@ h2 {
 /* Top Image section */
 .full-width-image-wrapper {
     position: relative;
-    height: calc(100vh / 5);
+    height: 20vh; /* Takes 1/5 of the vertical height of the browser window */
     background-color: black;
     width: calc(100% + 10rem);
-    margin-left: -5rem;
+    margin-left: -5rem; /* Extends beyond the body margins */
     margin-right: -5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -116,14 +110,15 @@ h2 {
 }
 
 .full-width-image img {
-    width: 2/3;
     height: auto;
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Fades left and right sides of the picture to the black background. */
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    /* Both included for compatibility, though it works without the second line on my Chrome */
+    /* Both included for compatibility, though it works without the second line on my version of Chrome */
+    
 }
 
-.text-container {
+.image-text-container {
     position: absolute;
     top: 0;
     left: calc(10%);
@@ -135,18 +130,18 @@ h2 {
     padding: 1rem;
 }
 
-.text-container p { /* This uses a different font. The C's and G's are less closed*/
+.image-text-container p { /* PDF image uses a different font. The C's and G's are less closed*/
     font-size: 2.5rem;
     font-weight: 100;
     color: white;
     line-height: 1.5;
 }
 
-.top-text {
+.image-top-text {
     padding-top: 4rem;
 }
 
-.bottom-text {
+.image-bottom-text {
     align-self: flex-end;
     text-align: right;
     padding-bottom: 4rem;
@@ -186,18 +181,14 @@ h2 {
     height: auto;
 }
 
-.text-block {
+.about-us-text-block {
     width: 50%;
     text-align: justify;
 }
 
 /* Psuedo-class to select the first paragraph */
-.text-block p:first-child {
+.about-us-text-block p:first-child {
     margin-bottom: 2rem;
-}
-
-.text-block p {
-    margin-bottom: 1rem;
 }
 
 .about-us-right img {
@@ -218,19 +209,18 @@ h2 {
 }
   
 .product-grid-item {
-    flex-basis: calc(33.33% - 2rem);
+    flex-basis: calc(33.33% - 2rem); /* 3 items per row, slightly less than 1/3 of screen width */
     max-width: calc(33.33% - 2rem);
     padding: 1rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
 }
 
 .product-grid-item img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: cover; /* Maintains aspect ratio by cropping images */
     border: 1px solid black;
 }
 
@@ -244,14 +234,20 @@ h2 {
     color: black;
 }
 
+.price {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: black;
+}
   
 .grid-item-info {
     display: flex;
     flex-direction: column;
 }
-  
+
+
+
 .grid-item-title-price {
-    
     display: flex;
     justify-content: space-between;
     align-items: baseline;
