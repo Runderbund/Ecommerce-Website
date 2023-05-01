@@ -224,33 +224,18 @@ h2 {
     border: 1px solid black;
 }
 
-.grid-title {
-    display: inline-block;
-}
-
-.title-text {
-    font-size: 1.3rem;
-    font-weight: 100;
-    color: black;
-}
-
-.price {
-    font-size: 1.3rem;
-    font-weight: 100;
-    color: black;
-}
-  
-.grid-item-info {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
 .grid-item-title-price {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: black;
+}
+
+.grid-item-info {
+    display: flex;
+    flex-direction: column;
 }
   
 .grid-item-line {
@@ -272,16 +257,16 @@ h2 {
   
 .learn-more {
     text-decoration: underline;
-    color: rgb(209, 118, 13);
+    color: rgb(207, 132, 46);
     cursor: pointer;
 }
   
 .add-to-cart {
-    background-color: rgb(209, 118, 13);
+    background-color: rgb(207, 132, 46);
     color: white;
     padding: 0.5rem 1rem;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /* Changes cursor to hand when hovering over "ADD TO CART"*/
 }
 
 /* CONTACT US section */
@@ -313,7 +298,7 @@ h2 {
 
 .send-button {
     align-self: flex-end;
-    background-color: rgb(209, 118, 13);
+    background-color: rgb(207, 132, 46);
     color: white;
     padding: 0.5rem 1rem;
     border: none;
@@ -322,7 +307,7 @@ h2 {
 
 /* Footer section */
 footer {
-    background-color: rgb(209, 118, 13);
+    background-color: rgb(207, 132, 46);
     padding: 1rem 0;
     margin-top: 3rem;
     margin-left: -5rem;
