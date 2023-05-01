@@ -328,7 +328,7 @@ footer {
 .footer-right {
     display: flex;
     align-items: center;
-    }
+}
 
 .footer-left img,
 .footer-right img {
